@@ -1,0 +1,16 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+
+# Local logs and temporary files
+*.log
+tmp/
+temp/
+
+# Optional generated media
+assets/videos/*.mp4
+!assets/videos/.gitkeep
