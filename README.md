@@ -17,15 +17,21 @@ Le site est statique, sans framework ni base de donnees. Il peut etre ouvert dir
 - `assets/js/main.js` : menu mobile, animations au scroll, effets au curseur et galeries.
 - `assets/js/icons.js` : icones SVG locales, sans dependance externe.
 - `assets/images/` : photos optimisees du portfolio.
-- `assets/videos/` : emplacement prevu pour une video de presentation.
+- `assets/images/projects/` : images optimisees des projets.
+- `assets/videos/` : video web optimisee de presentation.
+- `assets/docs/` : CV PDF telechargeable.
 
 ## Modifier les images
 
-Ajoutez les nouvelles images dans `assets/images/`, puis remplacez ou dupliquez les balises `<img>` dans `pages/projets.html`.
+Ajoutez les nouvelles images dans `assets/images/projects/`, puis remplacez ou dupliquez les balises `<img>` dans `pages/projets.html`.
 
 ## Ajouter une video
 
 Placez la video dans `assets/videos/presentation-kamoa.mp4`. La section video de `pages/projets.html` est deja reliee a ce chemin.
+
+## CV
+
+Le bouton de telechargement pointe vers `assets/docs/CV_Elonga_Rwabahizi_Victoire.pdf`.
 
 ## Contact
 

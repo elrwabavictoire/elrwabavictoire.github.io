@@ -27,6 +27,12 @@
     "clock-3": '<circle cx="12" cy="12" r="9"/><path d="M12 7v5h5"/>',
     "shield-check": '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-5"/>',
     workflow: '<rect x="3" y="4" width="6" height="6" rx="1"/><rect x="15" y="14" width="6" height="6" rx="1"/><path d="M9 7h3a4 4 0 0 1 4 4v3"/><path d="m13 11 3 3 3-3"/>',
+    download: '<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/>',
+    whatsapp: '<path d="M3 21l1.4-4.4A8.3 8.3 0 1 1 7.5 20L3 21z"/><path d="M9 8.8c.2-.5.4-.8.8-.8h.7c.2 0 .4.1.5.4l.8 1.8c.1.3 0 .6-.2.8l-.5.5a5.8 5.8 0 0 0 2.6 2.5l.5-.5c.2-.2.5-.3.8-.2l1.8.8c.3.1.4.3.4.6v.7c0 .4-.3.7-.7.8-1.7.3-4.1-.4-6-2.3-2-2-2.7-4.3-2.4-6z"/>',
+    linkedin: '<path d="M6.5 10v8"/><path d="M6.5 6.5v.1"/><path d="M11 18v-8"/><path d="M11 13.5c0-2.1 1.4-3.7 3.5-3.7S18 11.2 18 13.8V18"/><rect x="3" y="3" width="18" height="18" rx="4"/>',
+    twitter: '<path d="M4 4l16 16"/><path d="M20 4 4 20"/><path d="M8 4h3.2L20 20h-3.2L8 4z"/>',
+    facebook: '<path d="M14 8h3V4h-3c-3 0-5 2-5 5v3H6v4h3v5h4v-5h3l1-4h-4V9c0-.6.4-1 1-1z"/>',
+    instagram: '<rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.4"/><path d="M17.5 6.5h.1"/>',
     sparkles: '<path d="M12 3l1.7 4.6L18 9.3l-4.3 1.7L12 16l-1.7-5L6 9.3l4.3-1.7L12 3z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15z"/><path d="M5 14l.8 2.2L8 17l-2.2.8L5 20l-.8-2.2L2 17l2.2-.8L5 14z"/>'
   };
 

@@ -65,7 +65,18 @@
   }
 
   function setupMagneticGlass() {
-    document.querySelectorAll(".magnetic").forEach((element) => {
+    const selector = [
+      ".magnetic",
+      ".project-detail",
+      ".project-meta div",
+      ".story-media",
+      ".timeline-item",
+      ".language-list span",
+      ".hero-tags span",
+      ".social-link"
+    ].join(",");
+
+    document.querySelectorAll(selector).forEach((element) => {
       element.addEventListener("pointermove", (event) => {
         const rect = element.getBoundingClientRect();
         const x = ((event.clientX - rect.left) / rect.width) * 100;
