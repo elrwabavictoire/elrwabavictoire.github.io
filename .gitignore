@@ -13,4 +13,7 @@ temp/
 
 # Optional generated media
 assets/videos/*.mp4
+assets/videos/*.MOV
+assets/videos/*.mov
+!assets/videos/presentation-kamoa.mp4
 !assets/videos/.gitkeep

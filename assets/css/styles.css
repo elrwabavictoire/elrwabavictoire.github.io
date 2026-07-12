@@ -308,6 +308,7 @@ button {
 .contact-panel,
 .contact-form,
 .video-frame,
+.project-video,
 .gallery {
   position: relative;
   border: 1px solid var(--line);
@@ -325,6 +326,7 @@ button {
 .contact-panel::before,
 .contact-form::before,
 .video-frame::before,
+.project-video::before,
 .gallery::before,
 .skill-card::before,
 .competency-card::before,
@@ -349,10 +351,9 @@ button {
 .portrait-glass img {
   width: 100%;
   max-height: 620px;
-  aspect-ratio: 4 / 5;
+  height: auto;
   border-radius: calc(var(--radius) - 2px);
-  object-fit: cover;
-  object-position: center 18%;
+  object-fit: contain;
 }
 
 .portrait-caption {
@@ -486,9 +487,9 @@ button {
 
 .story-media img {
   width: 100%;
+  height: auto;
   max-height: 620px;
-  object-fit: cover;
-  object-position: center 22%;
+  object-fit: contain;
 }
 
 .story-copy {
@@ -524,6 +525,28 @@ button {
 
 .site-footer a {
   color: var(--text);
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.footer-nav a {
+  padding: 8px 10px;
+  border-radius: 6px;
+  color: var(--soft);
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.footer-nav a:hover,
+.footer-nav a.active {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--accent);
 }
 
 .page-hero {
@@ -621,7 +644,7 @@ button {
 
 .project-detail {
   display: grid;
-  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.92fr);
   gap: 24px;
   align-items: stretch;
   padding: 18px;
@@ -666,7 +689,13 @@ button {
 }
 
 .gallery {
-  min-height: 520px;
+  width: 100%;
+  max-width: 620px;
+  height: clamp(360px, 42vw, 520px);
+  min-height: 0;
+  align-self: center;
+  justify-self: center;
+  background: rgba(1, 7, 14, 0.72);
 }
 
 .gallery-track {
@@ -679,7 +708,7 @@ button {
   width: 100%;
   min-width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 
@@ -724,7 +753,25 @@ button {
 .video-frame video {
   width: 100%;
   height: 430px;
-  object-fit: cover;
+  object-fit: contain;
+}
+
+.project-video {
+  width: min(100%, 520px);
+  height: clamp(360px, 42vw, 520px);
+  align-self: center;
+  justify-self: center;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(1, 7, 14, 0.72);
+}
+
+.project-video video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .video-label {
@@ -990,6 +1037,7 @@ textarea:focus {
 .contact-panel,
 .contact-form,
 .video-frame,
+.project-video,
 .gallery,
 .metric-card,
 .skill-card,
@@ -997,6 +1045,7 @@ textarea:focus {
 .extra-card,
 .project-detail,
 .project-meta div,
+.project-video,
 .story-media,
 .story-copy,
 .timeline-item,
@@ -1027,6 +1076,7 @@ textarea:focus {
 
 .project-detail::before,
 .project-meta div::before,
+.project-video::before,
 .story-media::before,
 .story-copy::before,
 .timeline-item::before,
@@ -1046,6 +1096,7 @@ textarea:focus {
 .magnetic:hover::before,
 .project-detail:hover::before,
 .project-meta div:hover::before,
+.project-video:hover::before,
 .story-media:hover::before,
 .story-copy:hover::before,
 .timeline-item:hover::before,
@@ -1061,6 +1112,7 @@ textarea:focus {
 .contact-panel:hover,
 .contact-form:hover,
 .video-frame:hover,
+.project-video:hover,
 .gallery:hover,
 .metric-card:hover,
 .skill-card:hover,
@@ -1191,7 +1243,7 @@ textarea:focus {
   }
 
   .gallery {
-    min-height: 460px;
+    height: clamp(340px, 65vw, 500px);
   }
 }
 
@@ -1277,7 +1329,30 @@ textarea:focus {
   }
 
   .gallery {
-    min-height: 380px;
+    height: clamp(300px, 92vw, 440px);
+  }
+
+  .site-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .footer-nav {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-nav a {
+    width: 100%;
+    border: 1px solid var(--line);
+    text-align: center;
+  }
+
+  .project-video {
+    width: min(100%, 430px);
+    height: clamp(300px, 92vw, 440px);
+    min-height: 0;
   }
 
   .video-frame,
