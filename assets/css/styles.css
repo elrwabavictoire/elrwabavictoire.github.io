@@ -345,12 +345,14 @@ button {
 }
 
 .portrait-glass {
+  width: min(100%, var(--adaptive-frame-width, 100%));
+  justify-self: center;
   padding: 16px;
 }
 
 .portrait-glass img {
+  display: block;
   width: 100%;
-  max-height: 620px;
   height: auto;
   border-radius: calc(var(--radius) - 2px);
   object-fit: contain;
@@ -480,15 +482,17 @@ button {
 }
 
 .story-media {
+  width: min(100%, var(--adaptive-frame-width, 100%));
+  justify-self: center;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: var(--radius);
 }
 
 .story-media img {
+  display: block;
   width: 100%;
   height: auto;
-  max-height: 620px;
   object-fit: contain;
 }
 
@@ -689,9 +693,10 @@ button {
 }
 
 .gallery {
-  width: 100%;
-  max-width: 620px;
-  height: clamp(360px, 42vw, 520px);
+  width: min(100%, var(--gallery-width, 620px));
+  max-width: none;
+  height: auto;
+  aspect-ratio: var(--gallery-aspect, 4 / 3);
   min-height: 0;
   align-self: center;
   justify-self: center;
@@ -757,8 +762,9 @@ button {
 }
 
 .project-video {
-  width: min(100%, 520px);
-  height: clamp(360px, 42vw, 520px);
+  width: min(100%, 293px);
+  height: auto;
+  aspect-ratio: 9 / 16;
   align-self: center;
   justify-self: center;
   overflow: hidden;
@@ -1242,9 +1248,6 @@ textarea:focus {
     justify-self: start;
   }
 
-  .gallery {
-    height: clamp(340px, 65vw, 500px);
-  }
 }
 
 @media (max-width: 760px) {
@@ -1328,10 +1331,6 @@ textarea:focus {
     text-align: left;
   }
 
-  .gallery {
-    height: clamp(300px, 92vw, 440px);
-  }
-
   .site-footer {
     align-items: flex-start;
     flex-direction: column;
@@ -1350,8 +1349,8 @@ textarea:focus {
   }
 
   .project-video {
-    width: min(100%, 430px);
-    height: clamp(300px, 92vw, 440px);
+    width: min(100%, 248px);
+    height: auto;
     min-height: 0;
   }
 
